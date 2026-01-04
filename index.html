@@ -307,20 +307,30 @@
 Les quatre 3 forment un chemin valide !</div>
 
         <h3>2. La transformation</h3>
-        <p>Quand vous reliez des cases, elles se <strong>transforment en une seule case</strong> dont la valeur correspond au <strong>nombre de cases reliées</strong>.</p>
+        <p>Quand vous reliez des cases, <strong>chaque case se transforme</strong> en une nouvelle case dont la valeur correspond au <strong>nombre de cases reliées</strong>.</p>
 
         <div class="example-box">Vous reliez 4 cases contenant des "3"
-→ Elles disparaissent et laissent place à UN "4"
+→ Chacune des 4 cases devient un "4"
 
 Vous reliez 5 cases contenant des "2"
-→ Elles disparaissent et laissent place à UN "5"</div>
+→ Chacune des 5 cases devient un "5"</div>
 
         <div class="highlight">
             <strong>C'est la mécanique clé du jeu :</strong> en reliant plusieurs petits chiffres, vous créez des chiffres plus grands !
         </div>
 
-        <h3>3. La gravité</h3>
-        <p>Quand vous relâchez, les cases reliées disparaissent et de nouvelles tombent d'en haut pour les remplacer.</p>
+        <h3>3. Dépasser le maximum = disparition</h3>
+        <p>Chaque niveau a un <strong>chiffre maximum</strong> (ex: MAX = 6). Si la transformation dépasse ou atteint ce maximum, les cases <strong>disparaissent</strong> au lieu de se transformer.</p>
+
+        <div class="example-box">Exemple avec MAX = 6 :
+
+- Vous reliez 6 cases de "5" → Elles devraient devenir des "6"
+  Mais 6 = MAX, donc elles disparaissent !
+  
+- Vous reliez 3 cases de "4" → Elles deviennent des "3" (3 < 6, OK)</div>
+
+        <h3>4. La gravité</h3>
+        <p>Quand des cases disparaissent, les cases au-dessus tombent pour combler les trous, et de nouvelles cases arrivent depuis le stock.</p>
 
         <h2>Le score</h2>
         <p>Le score dépend de <strong>deux facteurs</strong> :</p>
