@@ -320,14 +320,14 @@ Vous reliez 5 cases contenant des "2"
         </div>
 
         <h3>3. Dépasser le maximum = disparition</h3>
-        <p>Chaque niveau a un <strong>chiffre maximum</strong> (ex: MAX = 6). Si la transformation dépasse ou atteint ce maximum, les cases <strong>disparaissent</strong> au lieu de se transformer.</p>
+        <p>Chaque niveau a un <strong>chiffre maximum</strong> (ex: MAX = 5). Si la transformation dépasse ce maximum, les cases <strong>disparaissent</strong> au lieu de se transformer.</p>
 
-        <div class="example-box">Exemple avec MAX = 6 :
+        <div class="example-box">Exemple avec MAX = 5 :
 
-- Vous reliez 6 cases de "5" → Elles devraient devenir des "6"
-  Mais 6 = MAX, donc elles disparaissent !
+- Vous reliez 6 cases de "3" → Elles devraient devenir des "6"
+  Mais 6 > MAX, donc elles disparaissent !
   
-- Vous reliez 3 cases de "4" → Elles deviennent des "3" (3 < 6, OK)</div>
+- Vous reliez 4 cases de "2" → Elles deviennent des "4" (4 < 5, OK)</div>
 
         <h3>4. La gravité</h3>
         <p>Quand des cases disparaissent, les cases au-dessus tombent pour combler les trous, et de nouvelles cases arrivent depuis le stock.</p>
