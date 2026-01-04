@@ -16,11 +16,11 @@
             background: linear-gradient(135deg, #0a1a25 0%, #1a2e3a 50%, #0d1f2d 100%);
             color: #e0e8f0;
             min-height: 100vh;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -36,53 +36,118 @@
         .subtitle {
             text-align: center;
             color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-size: 1.1rem;
+        }
+
+        /* Rules summary card */
+        .rules-summary {
+            background: rgba(15, 40, 55, 0.9);
+            border: 2px solid rgba(0, 200, 255, 0.5);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(0, 150, 200, 0.15);
+        }
+
+        .rules-summary ol {
+            margin: 0;
+            padding-left: 24px;
+        }
+
+        .rules-summary li {
+            margin: 12px 0;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .rules-summary li strong {
+            color: #00ddff;
+        }
+
+        /* Toggle button */
+        .toggle-btn {
+            display: block;
+            width: 100%;
+            background: rgba(0, 200, 255, 0.15);
+            border: 2px solid rgba(0, 200, 255, 0.4);
+            border-radius: 12px;
+            padding: 16px 24px;
+            color: #00ddff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .toggle-btn:hover {
+            background: rgba(0, 200, 255, 0.25);
+            border-color: rgba(0, 200, 255, 0.6);
+        }
+
+        .toggle-btn .arrow {
+            display: inline-block;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.open .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Details section */
+        .details-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .details-section.visible {
+            display: block;
         }
 
         h2 {
             color: #00ddff;
-            font-size: 1.6rem;
-            margin: 40px 0 20px;
-            padding-bottom: 10px;
+            font-size: 1.4rem;
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid rgba(0, 221, 255, 0.3);
             text-shadow: 0 0 10px rgba(0, 221, 255, 0.3);
         }
 
         h3 {
             color: #7dd3fc;
-            font-size: 1.2rem;
-            margin: 25px 0 15px;
+            font-size: 1.1rem;
+            margin: 20px 0 12px;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: rgba(255, 255, 255, 0.85);
         }
 
         .card {
             background: rgba(15, 40, 55, 0.8);
             border: 1px solid rgba(0, 200, 255, 0.3);
-            border-radius: 16px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 0 30px rgba(0, 150, 200, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
         }
 
         .highlight {
             background: rgba(0, 200, 255, 0.15);
             border-left: 4px solid #00ddff;
-            padding: 15px 20px;
+            padding: 12px 16px;
             border-radius: 0 8px 8px 0;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .warning {
             background: rgba(255, 180, 0, 0.15);
             border-left: 4px solid #ffb400;
-            padding: 15px 20px;
+            padding: 12px 16px;
             border-radius: 0 8px 8px 0;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .warning strong {
@@ -92,9 +157,9 @@
         .tip {
             background: rgba(100, 200, 100, 0.15);
             border-left: 4px solid #70d0b0;
-            padding: 15px 20px;
+            padding: 12px 16px;
             border-radius: 0 8px 8px 0;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .tip strong {
@@ -104,10 +169,11 @@
         .example-box {
             background: rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(0, 200, 255, 0.2);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 15px 0;
+            border-radius: 10px;
+            padding: 16px;
+            margin: 12px 0;
             font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
             white-space: pre;
             overflow-x: auto;
             color: #a0d8ef;
@@ -116,38 +182,34 @@
         .formula {
             display: inline-block;
             background: rgba(0, 200, 255, 0.2);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 8px;
             font-family: 'Courier New', monospace;
             color: #00ddff;
             font-weight: bold;
-            margin: 10px 0;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 15px 0;
             background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
+            font-size: 0.95rem;
         }
 
         th {
             background: rgba(0, 200, 255, 0.2);
             color: #00ddff;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
             font-weight: 600;
         }
 
         td {
-            padding: 12px 15px;
+            padding: 10px 12px;
             border-top: 1px solid rgba(0, 200, 255, 0.1);
-        }
-
-        tr:hover {
-            background: rgba(0, 200, 255, 0.05);
         }
 
         .points {
@@ -156,66 +218,47 @@
         }
 
         ul, ol {
-            margin: 15px 0;
-            padding-left: 25px;
+            margin: 12px 0;
+            padding-left: 24px;
         }
 
         li {
-            margin: 10px 0;
+            margin: 8px 0;
             color: rgba(255, 255, 255, 0.85);
         }
 
         .power-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
         }
 
         .power-card {
             background: rgba(15, 40, 55, 0.9);
             border: 1px solid rgba(0, 200, 255, 0.3);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 16px;
             text-align: center;
         }
 
         .power-card h4 {
             color: #00ddff;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
         .power-card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.7);
             margin: 0;
-        }
-
-        .power-card.free-only {
-            border-color: rgba(255, 180, 0, 0.4);
-        }
-
-        .power-card.free-only h4 {
-            color: #ffb400;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(255, 180, 0, 0.3);
-            color: #ffb400;
-            font-size: 0.7rem;
-            padding: 3px 8px;
-            border-radius: 4px;
-            margin-left: 8px;
-            vertical-align: middle;
         }
 
         .mode-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
+            gap: 15px;
+            margin: 15px 0;
         }
 
         @media (max-width: 600px) {
@@ -226,14 +269,14 @@
 
         .mode-card {
             background: rgba(15, 40, 55, 0.9);
-            border-radius: 16px;
-            padding: 25px;
+            border-radius: 12px;
+            padding: 20px;
             border: 2px solid rgba(0, 200, 255, 0.4);
         }
 
         .mode-card.libre {
             border-color: rgba(0, 255, 255, 0.6);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
         }
 
         .mode-card h3 {
@@ -243,9 +286,10 @@
         .bonus-row {
             display: flex;
             align-items: center;
-            gap: 15px;
-            padding: 12px 0;
+            gap: 12px;
+            padding: 10px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
         }
 
         .bonus-row:last-child {
@@ -253,7 +297,7 @@
         }
 
         .bonus-icon {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
         .bonus-text {
@@ -263,13 +307,13 @@
         .bonus-reward {
             color: #ffd700;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .footer {
             text-align: center;
-            margin-top: 60px;
-            padding: 30px;
+            margin-top: 40px;
+            padding: 20px;
             color: rgba(255, 255, 255, 0.5);
         }
 
@@ -283,175 +327,154 @@
         <h1>Edgy</h1>
         <p class="subtitle">Règles du jeu</p>
 
-        <h2>Le principe</h2>
-        <div class="card">
-            <p>Edgy est un jeu de puzzle où vous <strong>reliez des cases contenant le même chiffre</strong> pour marquer des points.</p>
+        <!-- Short rules summary -->
+        <div class="rules-summary">
+            <ol>
+                <li><strong>Relie</strong> par glissé des chiffres identiques qui se touchent (même en diagonale).</li>
+                <li>Tu dois relier <strong>plus de cases que la valeur du chiffre</strong>.<br><em>Ex : un « 3 » doit être relié à au moins 4 cases.</em></li>
+                <li>Toutes les cases reliées <strong>prennent la valeur du nombre de cases</strong>.<br><em>Ex : relier 4 cases → elles deviennent toutes « 4 »</em></li>
+                <li>Chaque niveau a un <strong>MAX</strong> : si le résultat dépasse MAX, les cases <strong>disparaissent</strong>.</li>
+                <li>Les cases <strong>tombent</strong>, de nouvelles arrivent.</li>
+                <li>La partie continue tant qu'un <strong>chemin est possible</strong>.</li>
+            </ol>
         </div>
 
-        <h2>Comment jouer ?</h2>
+        <!-- Toggle button -->
+        <button class="toggle-btn" id="toggleDetails">
+            En savoir plus <span class="arrow">▼</span>
+        </button>
 
-        <h3>1. Relier les cases</h3>
-        <p>Faites glisser votre doigt sur des cases <strong>adjacentes</strong> (horizontalement, verticalement ou en diagonale) qui contiennent le <strong>même chiffre</strong>.</p>
+        <!-- Detailed rules section (hidden by default) -->
+        <div class="details-section" id="detailsSection">
 
-        <div class="example-box">Exemple : Reliez quatre "3" adjacents
-┌───┬───┬───┐
-│ 3 │ 3 │ 2 │
-├───┼───┼───┤
-│ 1 │ 3 │ 3 │
-└───┴───┴───┘
-      ↓
-Les quatre 3 forment un chemin valide !</div>
+            <h2>Le score</h2>
+            <p>Le score dépend de la <strong>valeur du chiffre</strong> et du <strong>nombre de cases</strong> reliées.</p>
+            <p>Formule : <span class="formula">valeur × valeur × nombre de cases</span></p>
 
-        <h3>2. La transformation</h3>
-        <p>Quand vous reliez des cases, <strong>chaque case se transforme</strong> en une nouvelle case dont la valeur correspond au <strong>nombre de cases reliées</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Chiffre</th>
+                        <th>Cases</th>
+                        <th>Calcul</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>2 × 2 × 3</td>
+                        <td class="points">12 pts</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3 × 3 × 3</td>
+                        <td class="points">27 pts</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>4 × 4 × 2</td>
+                        <td class="points">32 pts</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>5 × 5 × 4</td>
+                        <td class="points">100 pts</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div class="example-box">Vous reliez 4 cases contenant des "3"
-→ Chacune des 4 cases devient un "4"
+            <div class="tip">
+                <strong>Astuce :</strong> Relier des chiffres élevés rapporte beaucoup plus de points !
+            </div>
 
-Vous reliez 5 cases contenant des "2"
-→ Chacune des 5 cases devient un "5"</div>
+            <h2>Le stock</h2>
+            <p>Chaque niveau dispose d'un <strong>stock de cases</strong>. Quand des cases disparaissent, de nouvelles arrivent depuis le stock.</p>
+            
+            <div class="warning">
+                <strong>Attention :</strong> Quand le stock est vide, les cases ne sont plus remplacées !
+            </div>
 
-        <div class="highlight">
-            <strong>C'est la mécanique clé du jeu :</strong> en reliant plusieurs petits chiffres, vous créez des chiffres plus grands !
-        </div>
+            <h2>Les modes de jeu</h2>
+            <div class="mode-section">
+                <div class="mode-card">
+                    <h3>Mode Carrière</h3>
+                    <p>Progressez à travers des niveaux de difficulté croissante :</p>
+                    <ul>
+                        <li>La grille s'agrandit</li>
+                        <li>Le chiffre MAX augmente</li>
+                        <li>Les objectifs de score augmentent</li>
+                    </ul>
+                </div>
+                <div class="mode-card libre">
+                    <h3 class="glow-text">Mode Libre</h3>
+                    <p>Jouez sans limite ! Battez votre record.</p>
+                    <p style="margin-top: 12px; color: #00ddff;"><strong>Bonus :</strong></p>
+                    <div class="bonus-row">
+                        <span class="bonus-icon">➡️</span>
+                        <span class="bonus-text">Ligne complète</span>
+                        <span class="bonus-reward">+500 pts</span>
+                    </div>
+                    <div class="bonus-row">
+                        <span class="bonus-icon">⬇️</span>
+                        <span class="bonus-text">Colonne complète</span>
+                        <span class="bonus-reward">+500 pts</span>
+                    </div>
+                </div>
+            </div>
 
-        <h3>3. Dépasser le maximum = disparition</h3>
-        <p>Chaque niveau a un <strong>chiffre maximum</strong> (ex: MAX = 5). Si la transformation dépasse ce maximum, les cases <strong>disparaissent</strong> au lieu de se transformer.</p>
+            <h2>Pouvoirs spéciaux</h2>
+            <div class="power-grid">
+                <div class="power-card">
+                    <h4>Mélange</h4>
+                    <p>Mélange toutes les cases de la grille.</p>
+                </div>
+                <div class="power-card">
+                    <h4>Court-circuit</h4>
+                    <p>Détruit une case de votre choix.</p>
+                </div>
+                <div class="power-card">
+                    <h4>Reprogrammation</h4>
+                    <p>Change le chiffre d'une case.</p>
+                </div>
+            </div>
 
-        <div class="example-box">Exemple avec MAX = 5 :
-
-- Vous reliez 6 cases de "3" → Elles devraient devenir des "6"
-  Mais 6 > MAX, donc elles disparaissent !
-  
-- Vous reliez 4 cases de "2" → Elles deviennent des "4" (4 < 5, OK)</div>
-
-        <h3>4. La gravité</h3>
-        <p>Quand des cases disparaissent, les cases au-dessus tombent pour combler les trous, et de nouvelles cases arrivent depuis le stock.</p>
-
-        <h2>Le score</h2>
-        <p>Le score dépend de <strong>deux facteurs</strong> :</p>
-        <ul>
-            <li>La <strong>valeur du chiffre</strong> relié</li>
-            <li>Le <strong>nombre de cases</strong> reliées</li>
-        </ul>
-
-        <p>Formule de base : <span class="formula">valeur × valeur × nombre de cases</span></p>
-
-        <h3>Exemples</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Chiffre</th>
-                    <th>Cases</th>
-                    <th>Calcul</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>2 × 2 × 3</td>
-                    <td class="points">12 pts</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3 × 3 × 3</td>
-                    <td class="points">27 pts</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>2</td>
-                    <td>4 × 4 × 2</td>
-                    <td class="points">32 pts</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>4</td>
-                    <td>5 × 5 × 4</td>
-                    <td class="points">100 pts</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="tip">
-            <strong>Astuce :</strong> Relier des chiffres élevés rapporte beaucoup plus de points !
-        </div>
-
-        <h2>Le stock</h2>
-        <p>Chaque niveau dispose d'un <strong>stock de cases</strong>. Quand des cases disparaissent, de nouvelles arrivent depuis le stock.</p>
-        
-        <div class="warning">
-            <strong>Attention :</strong> Quand le stock est vide, les cases ne sont plus remplacées !
-        </div>
-
-        <h2>Fin de partie</h2>
-        <div class="card">
-            <p>La partie se termine quand :</p>
-            <ul>
-                <li>✅ Vous atteignez le <strong>score objectif</strong> → <strong style="color: #70d0b0;">Victoire !</strong></li>
-                <li>❌ Il n'y a <strong>plus de coups possibles</strong> et le stock est vide → <strong style="color: #ff6b6b;">Défaite</strong></li>
-            </ul>
-        </div>
-
-        <h2>Les modes de jeu</h2>
-        <div class="mode-section">
-            <div class="mode-card">
-                <h3>Mode Carrière</h3>
-                <p>Progressez à travers des niveaux de difficulté croissante :</p>
+            <h2>Astuces</h2>
+            <div class="card">
                 <ul>
-                    <li>La grille s'agrandit (4×4, 5×5, 6×6...)</li>
-                    <li>Le chiffre maximum augmente</li>
-                    <li>Les objectifs de score augmentent</li>
+                    <li><strong>Cherchez les longues chaînes</strong> — Plus le chemin est long, plus vous gagnez de points</li>
+                    <li><strong>Anticipez la gravité</strong> — Les cases tombent vers le bas après chaque coup</li>
+                    <li><strong>Gardez vos mélanges</strong> — Ne les utilisez que quand vous êtes vraiment bloqué</li>
                 </ul>
             </div>
-            <div class="mode-card libre">
-                <h3 class="glow-text">Mode Libre</h3>
-                <p>Jouez sans limite ! Pas d'objectif, juste votre meilleur score à battre.</p>
-                <p style="margin-top: 15px; color: #00ddff;"><strong>Bonus exclusifs :</strong></p>
-                <div class="bonus-row">
-                    <span class="bonus-icon">➡️</span>
-                    <span class="bonus-text">Ligne complète</span>
-                    <span class="bonus-reward">+500 pts + 1 Court-circuit</span>
-                </div>
-                <div class="bonus-row">
-                    <span class="bonus-icon">⬇️</span>
-                    <span class="bonus-text">Colonne complète</span>
-                    <span class="bonus-reward">+500 pts + 1 Reprogrammation</span>
-                </div>
-            </div>
-        </div>
-
-        <h2>Pouvoirs spéciaux</h2>
-        <div class="power-grid">
-            <div class="power-card">
-                <h4>Mélange</h4>
-                <p>Mélange toutes les cases de la grille. Utile quand vous êtes bloqué !</p>
-            </div>
-            <div class="power-card">
-                <h4>Court-circuit</h4>
-                <p>Détruit instantanément une case de votre choix.</p>
-            </div>
-            <div class="power-card">
-                <h4>Reprogrammation</h4>
-                <p>Change le chiffre d'une case en un autre de votre choix.</p>
-            </div>
-        </div>
-
-        <h2>Astuces</h2>
-        <div class="card">
-            <ol>
-                <li><strong>Cherchez les longues chaînes</strong> — Plus le chemin est long, plus vous gagnez de points</li>
-                <li><strong>Anticipez la gravité</strong> — Les cases tombent vers le bas après chaque coup</li>
-                <li><strong>Gardez vos mélanges</strong> — Ne les utilisez que quand vous êtes vraiment bloqué</li>
-                <li><strong>Visez les lignes/colonnes</strong> — En Mode Libre, les bonus valent le coup !</li>
-            </ol>
         </div>
 
         <div class="footer">
             <p>Bonne partie !</p>
         </div>
     </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleDetails');
+        const detailsSection = document.getElementById('detailsSection');
+
+        toggleBtn.addEventListener('click', function() {
+            const isVisible = detailsSection.classList.contains('visible');
+            
+            if (isVisible) {
+                detailsSection.classList.remove('visible');
+                toggleBtn.classList.remove('open');
+                toggleBtn.innerHTML = 'En savoir plus <span class="arrow">▼</span>';
+            } else {
+                detailsSection.classList.add('visible');
+                toggleBtn.classList.add('open');
+                toggleBtn.innerHTML = 'Masquer les détails <span class="arrow">▼</span>';
+            }
+        });
+    </script>
 </body>
 </html>
